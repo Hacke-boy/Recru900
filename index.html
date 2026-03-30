@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>900 YEAR'S ESPORT | RECRUTEMENT</title>
+    <title>900 YEAR'S ESPORT | RECRUTEMENT FREE FIRE</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <div id="loader">
         <div class="loader-content">
-            <div class="logo-load">900</div>
+            <div class="logo-load">900 <span class="red">Y.S</span></div>
             <div class="bar-container">
                 <div class="bar"></div>
             </div>
@@ -25,40 +26,70 @@
         </header>
 
         <section id="hero">
-            <h1>RECRUTEMENT <span class="red">FREE FIRE</span></h1>
-            <p>REJOINS L'ÉLITE. ÉCRASE LA CONCURRENCE.</p>
+            <div class="glow-red"></div>
+            <h1>RECRUTEMENT<br><span class="highlight">FREE FIRE</span></h1>
+            <p class="tagline">L'élite se prépare. L'empire se construit. Sensibilité 200 activée.</p>
         </section>
 
         <section id="formulaire">
             <div class="form-card">
-                <h2>POSTULER</h2>
-                <form action="https://formsubmit.co/ldorce30@gmail.com" method="POST">
-                    <input type="text" name="Pseudo" placeholder="ID / PSEUDO EN JEU" required>
-                    <input type="number" name="Niveau" placeholder="TON NIVEAU (59 MIN)" min="59" required>
+                <h2>CANDIDATURE</h2>
+                
+                <form action="https://formsubmit.co/ton-email@gmail.com" method="POST" enctype="multipart/form-data">
                     
-                    <p class="label">CHOISIS TON RÔLE :</p>
-                    <div class="roles">
-                        <label><input type="checkbox" name="Role" value="Rush"> RUSH</label>
-                        <label><input type="checkbox" name="Role" value="Sniper"> SNIPER</label>
-                        <label><input type="checkbox" name="Role" value="Support"> SUPPORT</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="Pseudo" placeholder="TON ID / PSEUDO EN JEU" required>
                     </div>
 
-                    <textarea name="Message" placeholder="TES MOTIVATIONS..."></textarea>
+                    <div class="input-group">
+                        <i class="fas fa-trophy"></i>
+                        <input type="number" name="Niveau" placeholder="TON NIVEAU (59 MIN)" min="59" required>
+                    </div>
+
+                    <p class="label-group"><i class="fas fa-camera red"></i> CAPTURE DU PROFIL (PREUVE DE NIVEAU)</p>
+                    <input type="file" name="Capture_Profil" accept="image/*" required class="file-input">
+                    
+                    <p class="label-group"><i class="fas fa-crosshairs red"></i> CHOISIS TON RÔLE PRINCIPAL</p>
+                    <div class="roles-group">
+                        <label class="check-container">RUSH
+                            <input type="checkbox" name="Role" value="Rush">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">SNIPER
+                            <input type="checkbox" name="Role" value="Sniper">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">SUPPORT
+                            <input type="checkbox" name="Role" value="Support">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <textarea name="Message" placeholder="POURQUOI REJOINDRE 900 YEAR'S ESPORT ? (Motivation)"></textarea>
                     
                     <input type="hidden" name="_next" value="https://hacke-boy.github.io/Recru900/">
-                    <button type="submit">ENVOYER LA CANDIDATURE</button>
+                    <input type="hidden" name="_subject" value="Nouvelle Candidature 900 Y.S">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <button type="submit" class="btn-submit">ENVOYER LA CANDIDATURE</button>
                 </form>
             </div>
         </section>
+
+        <footer>
+            <p>&copy; 2026 900 YEAR'S ESPORT - DIVISION JEUX VIDÉO DE L'EMPIRE</p>
+        </footer>
     </div>
 
     <script>
-        // Script pour la page de chargement
         window.onload = function() {
             setTimeout(function() {
+                // Cache le loader
                 document.getElementById('loader').style.display = 'none';
+                // Affiche le site
                 document.getElementById('site-content').style.display = 'block';
-            }, 2500); // 2.5 secondes de chargement
+            }, 2500); // 2.5 secondes
         };
     </script>
 </body>
